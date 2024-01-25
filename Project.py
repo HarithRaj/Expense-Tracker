@@ -1,5 +1,5 @@
 import os
-import datetime
+import datetime     
 from tabulate import tabulate
 
 table=[]
@@ -34,13 +34,14 @@ for i in range(No_of_Expenses):
     Payment_Method=input("Payment Method = ")
     Total_expense=Total_expense+Expense
 
-    l=[i+1,date,Paid,Payment_Method,Expense_category,Expense,Total_expense]
-    table.append(l)
+    list_of_details=[i+1,date,Paid,Payment_Method,Expense_category,Expense,Total_expense]
+    table.append(list_of_details)
     
 header=["SL.No","Date of payment","Paid to","Payement method","Expense Category","Expense Amount","Total Expense"]
 
-with open("Expense.txt","w") as f:
+with open("Expense.txt","a") as f:
         f.write(tabulate(table,headers=header,tablefmt="grid"))
 with open("Expense.txt","r") as f:
     r=f.read()
     print(r)
+exit()
