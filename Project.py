@@ -9,6 +9,7 @@ Total_expense=0
 
 
 for i in range(No_of_Expenses):
+    print("Enter the Date of Payment")
     while True:
         try:
             year = int(input("Enter year: "))
@@ -30,8 +31,8 @@ for i in range(No_of_Expenses):
                  Expense=int(input("Enter the Expense ammount = "))
 
     Expense_category=input("Enter the Expense category = ")
-    Paid=input("Paid TO = ")
-    Payment_Method=input("Payment Method = ")
+    Paid=input("The Ammmount Was Paid To = ")
+    Payment_Method=input("Enter the Payment Method = ")
     Total_expense=Total_expense+Expense
 
     list_of_details=[i+1,date,Paid,Payment_Method,Expense_category,Expense,Total_expense]
