@@ -48,4 +48,8 @@ with open("Expense.txt","a") as f:
 with open("Expense.txt","r") as f:
     r=f.read()
     print(r)
-exit()
+
+if os.path.exists("Expense.txt"):
+    print("File exist")
+else:
+     print("File not exist")
