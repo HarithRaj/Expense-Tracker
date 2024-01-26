@@ -3,13 +3,10 @@ import datetime
 from tabulate import tabulate
 
 table=[]
-
 No_of_Expenses=int(input("Enter the number of Expenses = "))
-Total_expense=0
 
-
-for i in range(No_of_Expenses):
-    print("Enter the Date of Payment")
+def expense():  
+    Total_expense=0
     while True:
         try:
             year = int(input("Enter year: "))
@@ -37,7 +34,13 @@ for i in range(No_of_Expenses):
 
     list_of_details=[i+1,date,Paid,Payment_Method,Expense_category,Expense,Total_expense]
     table.append(list_of_details)
-    
+
+
+
+for i in range(No_of_Expenses):
+    print("Enter the Date of Payment")
+    expense()
+
 header=["SL.No","Date of payment","Paid to","Payement method","Expense Category","Expense Amount","Total Expense"]
 
 with open("Expense.txt","a") as f:
